@@ -227,6 +227,11 @@ const ScrollableTabView = React.createClass({
     }
   },
 
+  _updateScrollValue(value) {
+   this.state.scrollValue.setValue(value);
+   this.props.onScroll(value);
+  },
+
   _updateSelectedPage(nextPage) {
     let localNextPage = nextPage;
     if (typeof localNextPage === 'object') {

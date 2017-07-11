@@ -96,8 +96,8 @@ const ScrollableTabView = React.createClass({
   goToPage(pageNumber, animated = !this.props.scrollWithoutAnimation) {
     if (Platform.OS === 'ios') {
       const offset = pageNumber * this.state.containerWidth;
-      if (this.scrollView) {
-        this.scrollView.scrollTo({x: offset, y: 0, animated: !this.props.scrollWithoutAnimation, });
+      if (this.scrollView && this.scrollView._component && this.scrollView._component.scrollTo) {
+        this.scrollView._component.scrollTo({x: offset, y: 0, animated, });
       }
     } else {
       if (this.scrollView) {

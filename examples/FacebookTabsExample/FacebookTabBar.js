@@ -6,8 +6,9 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
+const createReactClass = require('create-react-class');
 
-const FacebookTabBar = React.createClass({
+const FacebookTabBar = createReactClass({
   tabIcons: [],
 
   propTypes: {

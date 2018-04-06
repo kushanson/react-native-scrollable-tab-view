@@ -12,8 +12,9 @@ import ScrollableTabsExample from './ScrollableTabsExample';
 import OverlayExample from './OverlayExample';
 import FacebookExample from './FacebookExample';
 import DynamicExample from './DynamicExample';
+const createReactClass = require('create-react-class');
 
-const HomeScreen = React.createClass({
+const HomeScreen = createReactClass({
   navigationOptions: {
     title: 'Welcome',
   },
